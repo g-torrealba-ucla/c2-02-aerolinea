@@ -1,13 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
-    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>HTML + CSS</title>
+    <title>Aerolínea SUPERVUELOS</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>This is a simple HTML + CSS template!</h1>
+    <div id="mainForm">
+      <h3>Aerolínea SUPERVUELOS</h3>
+      <table id="mainFormTabla">
+      <tr>
+          <th>Número</th>
+          <th>Tipo</th>
+          <th>Costo</th>
+          <th>Pasajeros</th>
+          <th>Ingreso</th>
+        </tr>
+      </table>
+      <h5>Ingreso Total del día: Bs.<span id="mainFormLblIngresoTotal">?</span></h5>
+      <h5>Menor Número de Pasajeros en un vuelo: <span id="mainFormLblMenorNumPasajeros">?</span> pasajeros</h5>
+      <h5>Porcentaje de vuelos internacionales: <span id="mainFormLblPorcInternacionales">?</span>%</h5>
+      <button id="mainFormBtAgregar">Agregar vuelo</button>
+    </div>
+    <div id="vueloForm">
+      <h3>Datos del vuelo</h3>
+      <label>
+        Número
+        <input type="text" id="vueloFormLblNumero"></input>
+      </label><br>
+      <label>
+        Tipo
+        <input type="text" id="vueloFormLblTipo"></input>
+      </label><br>    
+      <label>
+        Costo
+        <input type="text" id="vueloFormLblCosto"></input>
+      </label><br>    
+      <label>
+        Pasajeros
+        <input type="text" id="vueloFormLblPasajeros"></input>
+      </label><br>   
+      <button id="vueloFormBtAceptar">Aceptar</button> 
+    </div>
   </body>
+  <script type="module">
+    import {Cl_main} from "./js/Cl_main.js";
+    new Cl_main()
+ </script>
 </html>
